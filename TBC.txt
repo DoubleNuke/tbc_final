@@ -1,0 +1,51 @@
+TBC 
+import the random module
+
+
+Make a class named "Character"
+	initialize (itself, name, health, accuracy, damage, and armor)
+	super().__init__() 
+	assign self.name, health, etc. to itself
+	"self.name = name"
+	
+	assign properties for each value
+	@property
+	define ...(self)
+		return self.__(...)
+
+	give "setters" for each property
+	@(...).setter 
+	define with itself and a value
+		except for name and health, check to see if the value is too small or large, or even applicable
+		return the checked/defaulted value
+
+	define testInt as (itself, returned value, a min number, max number, and a default)
+		check if the value is an integer,
+			if it is, check if its too big
+				if its not, check if its too small
+					return the new value
+				if it is, set value to default and say "Too small"
+			if it is, set the value to the default and say "Too big"
+		if its not, set to the default and say "Must be an Integer"
+
+	define printStats as (itself)
+		print out each stat of the hero
+
+	define hit as (itself, and the enemy)
+		if a random number between 0-100 is lower than the characters hitchance
+			roll between 1 and the characters max damage to determine damage
+			check if the enemy has armor. If it does...
+				subtract the rolled damage by the armor value
+			make sure damage cannot go under 0
+		if the number is higher...
+			tell the user "The attacking character missed!"
+
+	define fight as (itself, the hero, and the enemy)
+		As long as no one is dead
+			The hero attacks the enemy, then The enemy attacks the hero
+			if either of them hit, print out their individual attacks
+			print out the hero and villains current health
+			If the hero dies...
+				print "The hero loses", end the loop
+			If the monster dies...
+				print "The monster loses", end the loop

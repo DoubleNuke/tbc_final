@@ -1,0 +1,11 @@
+Combat
+Import TCB as a module
+
+
+define main
+	set hero to tbc's default character 
+	set monster to your own Character(Name, health, accuracy, damage, and armor values)
+	use tbc modules function "fight" to pit the two together
+
+if __name__ == "__main__"
+	main()
